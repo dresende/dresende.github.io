@@ -20,11 +20,11 @@ the whole index — `ls` is the status report.
 | --- | --- | --- |
 | `kirjo/` | marketing URL, en-US, iOS **and** tvOS 1.0 | Kirjo 1.1 |
 | `helmi/` | marketing URL, en-US, 1.0 | Helmi 1.1 |
-| `mittari/` | privacy policy URL (11 locales), support URL (11), marketing URL (6), 1.1 | Mittari 1.2 |
 
-`mittari/privacy.html` is the one to be careful with: it is the privacy
-policy link on a live listing in eleven languages. Do not remove it
-before Mittari's next version is approved.
+Mittari was the third, and the reason this repository exists at all: its
+privacy policy link, in eleven languages, pointed here. 1.2 went live on
+15 September carrying the corrected URLs, so its folder is gone — which
+is how each of these ends.
 
 `404.html` redirects any other old path — `/sikku/...`, `/tulos/...`, a
 deep link nobody wrote down — to the matching subdomain, so the removed
