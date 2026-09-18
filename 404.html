@@ -18,13 +18,29 @@
     // /<app>/<rest> -> https://<app>.dresende.pt/<rest>, for the apps that
     // ever lived here. Anything else is left alone: a wrong guess would
     // send someone to a domain that does not exist.
+    //
+    // Every forward carries ?from=legacy-redirect, which is the only way
+    // to see who still arrives through this domain. The population that
+    // matters is Mittari 1.0 and 1.1: their About screen has
+    // dresende.github.io/mittari/ compiled into the binary and it can
+    // never be changed for someone who does not update. The destination
+    // host says which app; the marker says they came the old way.
+    //
+    // It undercounts, and only in the safe direction — someone has to
+    // actually tap the link to appear. When it reads zero over a long
+    // enough window, this repository has genuinely finished.
     (function () {
       var apps = ["kirjo", "sikku", "helmi", "tulos", "mittari", "cruzadas", "pilvi", "talo"];
       var parts = location.pathname.split("/").filter(Boolean);
       if (parts.length && apps.indexOf(parts[0]) !== -1) {
         var rest = parts.slice(1).join("/");
+        // Merged rather than appended: an old deep link may already carry
+        // a query, and "?a=1?from=..." is one string, not two parameters.
+        var query = location.search
+          ? location.search + "&from=legacy-redirect"
+          : "?from=legacy-redirect";
         location.replace("https://" + parts[0] + ".dresende.pt/" + rest
-                         + location.search + location.hash);
+                         + query + location.hash);
       }
     })();
   </script>
