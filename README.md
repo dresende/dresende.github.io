@@ -18,13 +18,14 @@ the whole index — `ls` is the status report.
 
 | Folder | Still named by | Cleared when |
 | --- | --- | --- |
-| `kirjo/` | marketing URL, en-US, iOS **and** tvOS 1.0 | Kirjo 1.1 |
 | `helmi/` | marketing URL, en-US, 1.0 | Helmi 1.1 |
 
-Mittari was the third, and the reason this repository exists at all: its
-privacy policy link, in eleven languages, pointed here. 1.2 went live on
-15 September carrying the corrected URLs, so its folder is gone — which
-is how each of these ends.
+Mittari was the first to go, and the reason this repository exists at
+all: its privacy policy link, in eleven languages, pointed here. 1.2 went
+live on 15 September carrying the corrected URLs, so its folder is gone.
+Kirjo followed on 18 September — 1.1 shipped on both iOS and tvOS with
+the marketing URL corrected in all twelve locales, so its folder went
+too. That is how each of these ends.
 
 `404.html` redirects any other old path — `/sikku/...`, `/tulos/...`, a
 deep link nobody wrote down — to the matching subdomain, so the removed
